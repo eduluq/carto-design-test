@@ -4,40 +4,39 @@
   display: flex
   justify-content: space-around
   align-items: flex-start
-  margin-top: 100px
+  margin: 100px auto
 
 aside#aside-article-page
   width: 30%
   margin-top: 10px
   margin-right: 20px
+
+  .menu
+    font-family: Montserrat
+    font-size: 13px
+    color: $main-menu-color
+
+    li
+      margin-bottom: 30px
+      cursor: pointer
+
+  .submenu
+    color: $secondary-menu-color
+
+    li
+      margin-top: 20px
+      margin-bottom: 0
+      margin-left: 30px
+
+      &:hover
+        font-weight: 700
+
+      &.is-selected
+        font-weight: 700
+        color: $is-selected-color
+
 main#article-page
   width: 70%
-
-.menu
-  font-family: Montserrat
-  font-size: 13px
-  color: $main-menu-color
-
-  li
-    margin-bottom: 30px
-    cursor: pointer
-
-.submenu
-  color: $secondary-menu-color
-
-  li
-    margin-top: 20px
-    margin-bottom: 0
-    margin-left: 30px
-
-    &:hover
-      font-weight: 700
-
-    &.is-selected
-      font-weight: 700
-      color: $is-selected-color
-
-main
   font-family: Montserrat
   color: $main-color
 
@@ -67,10 +66,31 @@ main
     line-height: 24px
     margin-bottom: 24px
 
-  .code-box
+  code
+    display: block
     margin-bottom: 24px
-    height: 448px
     background: $main-color
+    color: white
+    padding: 16px
+    font-size: 13px
+    line-height: 24px
+    overflow: hidden
+
+    &.prettyprint
+
+      ol.linenums
+        counter-reset: linenumber
+
+      ol.linenums li
+        list-style-type: none
+        counter-increment: linenumber
+
+      ol.linenums li:before
+        content: counter(linenumber)
+        float: left
+        text-align: right
+        margin-right: 32px
+        color: #647083
 
   a
     color: $link-color

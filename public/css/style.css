@@ -31,6 +31,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 body {
   background: #fff;
   width: 100vw;
@@ -266,83 +270,95 @@ aside#article-page {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  margin-top: 100px; }
+  margin: 100px auto; }
 
 aside#aside-article-page {
   width: 30%;
   margin-top: 10px;
   margin-right: 20px; }
+  aside#aside-article-page .menu {
+    font-family: Montserrat;
+    font-size: 13px;
+    color: #B1B8C1; }
+    aside#aside-article-page .menu li {
+      margin-bottom: 30px;
+      cursor: pointer; }
+  aside#aside-article-page .submenu {
+    color: #647083; }
+    aside#aside-article-page .submenu li {
+      margin-top: 20px;
+      margin-bottom: 0;
+      margin-left: 30px; }
+      aside#aside-article-page .submenu li:hover {
+        font-weight: 700; }
+      aside#aside-article-page .submenu li.is-selected {
+        font-weight: 700;
+        color: #162945; }
 
 main#article-page {
-  width: 70%; }
-
-.menu {
-  font-family: Montserrat;
-  font-size: 13px;
-  color: #B1B8C1; }
-  .menu li {
-    margin-bottom: 30px;
-    cursor: pointer; }
-
-.submenu {
-  color: #647083; }
-  .submenu li {
-    margin-top: 20px;
-    margin-bottom: 0;
-    margin-left: 30px; }
-    .submenu li:hover {
-      font-weight: 700; }
-    .submenu li.is-selected {
-      font-weight: 700;
-      color: #162945; }
-
-main {
+  width: 70%;
   font-family: Montserrat;
   color: #162945; }
-  main section {
+  main#article-page section {
     margin-bottom: 64px; }
-  main h1 {
+  main#article-page h1 {
     font-weight: 700;
     font-size: 24px;
     line-height: 40px;
     margin-bottom: 8px; }
-  main h2 {
+  main#article-page h2 {
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 8px; }
-  main h3 {
+  main#article-page h3 {
     font-weight: 400;
     font-size: 17px;
     line-height: 24px;
     margin-bottom: 8px; }
-  main p {
+  main#article-page p {
     font-size: 15px;
     line-height: 24px;
     margin-bottom: 24px; }
-  main .code-box {
+  main#article-page code {
+    display: block;
     margin-bottom: 24px;
-    height: 448px;
-    background: #162945; }
-  main a {
+    background: #162945;
+    color: white;
+    padding: 16px;
+    font-size: 13px;
+    line-height: 24px;
+    overflow: hidden; }
+    main#article-page code.prettyprint ol.linenums {
+      counter-reset: linenumber; }
+    main#article-page code.prettyprint ol.linenums li {
+      list-style-type: none;
+      counter-increment: linenumber; }
+    main#article-page code.prettyprint ol.linenums li:before {
+      content: counter(linenumber);
+      float: left;
+      text-align: right;
+      margin-right: 32px;
+      color: #647083; }
+  main#article-page a {
     color: #1785FB;
     font-size: 15px;
     line-height: 24px;
     font-weight: 500;
     cursor: pointer; }
-  main table {
+  main#article-page table {
     border-radius: 4px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
     margin-bottom: 32px;
     width: 100%; }
-    main table td, main table th {
+    main#article-page table td, main#article-page table th {
       text-align: left;
       padding: 16px;
       border: 1px solid #eee;
       font-size: 13px; }
-    main table th {
+    main#article-page table th {
       font-weight: 600; }
-  main .info-box {
+  main#article-page .info-box {
     border-radius: 4px;
     width: 100%;
     box-sizing: border-box;
@@ -352,19 +368,19 @@ main {
     color: #162945;
     font-size: 13px;
     line-height: 24px; }
-  main .concept-box {
+  main#article-page .concept-box {
     width: 100%;
     padding: 16px;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: #F9F9F9;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15); }
-    main .concept-box .title {
+    main#article-page .concept-box .title {
       color: #162945;
       font-size: 15px;
       line-height: 24px;
       margin-bottom: 0; }
-    main .concept-box .description {
+    main#article-page .concept-box .description {
       color: #647083;
       font-size: 13px;
       line-heigt: 24px;

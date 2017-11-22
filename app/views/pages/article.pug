@@ -7,13 +7,18 @@ block content
       
       aside#aside-article-page
         ul.menu
-        each dir in menu
-          li= dir.title
-            if dir.files.length
-              ul.submenu
-                each file in dir.files
-                  li 
-                    a(href="/:" + file.toLowerCase().split(' ').join('-'))= file
+          each dir in menu
+            li= dir.title
+              if dir.files.length
+                ul.submenu
+                  each file in dir.files
+                    li 
+                      a(href="/:" + file.toLowerCase().split(' ').join('-'))= file
 
       main#article-page
         .content!= content
+
+  script(src="/js/index.js")
+  script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert")
+  
+    
