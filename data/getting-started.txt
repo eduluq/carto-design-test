@@ -19,7 +19,7 @@ window.onload = function() {
 }
 </script>
 ```
-[Grab the complete source code](https://www.google.com)
+[Grab the complete source code]()
 
 
 ## Using the CARTO.js LibraryPermalink

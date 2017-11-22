@@ -28,7 +28,7 @@ basicController.getArticle = (req, res) => {
       console.log("Error reading file")
       var html = "<h1>Sorry! Something bad happened</h1>"
       html += "<h2>We don't find the file you're looking for."
-      html += "<p>Please, if you think there is an error, <a>contact us</a> and we'll fix it."
+      html += "<p>Please, if you think there is an error, <a class=\"link\">contact us</a> and we'll fix it."
 
       res.render("pages/article", {
         menu: menu,
@@ -39,15 +39,17 @@ basicController.getArticle = (req, res) => {
 
     else {
       var sections = data.split('\n\n\n');
-      var html = "";
+      var content = "";
       for (var i = 0; i < sections.length; i++) {
-        var aux = "<section>" + marked(sections[i]) + "</section>"
-        html += aux
+        var html = marked(sections[i]);
+        console.log(html)
+        var aux = "<section>" + html + "</section>"
+        content += aux
       }
 
       res.render("pages/article", {
         menu: menu,
-        content: html
+        content: content
       });
 
     }

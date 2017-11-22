@@ -24,3 +24,9 @@ $(document).ready(function() {
   });
 
 });
+
+//Toggle menu
+$('.nav-toggle').on('click', function() {
+  $(this).toggleClass("nav-toggle--active");
+  $($(this).find(".side-nav")[0]).toggleClass("side-nav--active");
+});

@@ -1,1 +1,29 @@
-var code=$("code");code.each(function(o,e){e.className+=" prettyprint linenums"}),$(document).ready(function(){var o=$(window).height(),e=$(document).height(),n=$("progress"),t,c;t=e-o,n.attr("max",t),$(document).on("scroll",function(){c=$(window).scrollTop(),n.attr("value",c)})});
+//Add code style to article code items
+var code = $("code");
+
+code.each(function(i, el) {
+  el.className += " prettyprint linenums";
+})
+
+//Progress Bar
+$(document).ready(function() {
+
+  var winHeight = $(window).height();
+  var docHeight = $(document).height();
+  var progressBar = $('progress');
+  var max;
+  var value;
+
+  /* Set the max scrollable area */
+  max = docHeight - winHeight;
+  progressBar.attr('max', max);
+
+  $(document).on('scroll', function(){
+     value = $(window).scrollTop();
+     progressBar.attr('value', value);
+  });
+
+});
+
+//Toggle menu
+$('nav-toggle')

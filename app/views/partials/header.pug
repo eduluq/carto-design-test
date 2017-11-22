@@ -5,15 +5,31 @@ mixin list(links, main)
   .container
     ul
       if main
+        
+        //- Logo
         li
           a(href="/").logo.logo--nav
             span.logo__name.logo__name--nav CART
             span.logo__circle.logo__circle--nav
+        
+        //- Mobile toggle      
+        li.nav-toggle
+          span.nav-toggle__icon    
+          ul.side-nav
+            
+            li
+              a(href="/docs").logo
+                span.logo__name CART
+                span.logo__circle
+                  
+            each link, i in links
+              li
+                a(href="" + link.href).link= link.name
+        
+      //- Links        
       each link, i in links
         li
-          a(href="" + link.href)= link.name
-      else
-        li There are no values
+          a(href="" + link.href).link= link.name
  
 nav.nav.nav-main
   +list(mainLinks, true)

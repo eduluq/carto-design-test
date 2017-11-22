@@ -1,33 +1,34 @@
+$logo-font-size: 32px
+$logo-font-size--nav: 16px
+
 .logo
-  display: block
+  display: flex
+  align-items: center
   text-decoration: none
   padding: 20px
-  width: 138px
   border: 5px solid white
 
   .logo__name
-  	font-family: Montserrat
-  	font-size: 32px
-  	font-weight: 700
-  	color: white
-  	letter-spacing: 5px
+    font-family: Montserrat
+    font-size: $logo-font-size
+    font-weight: 700
+    color: white
+    letter-spacing: 7px
+    display: block
 
   .logo__circle
-    width: 100px
-    height: 100px
-    margin: 45vh auto
-    border-radius: 50%
     position: relative
-    top: -6px
-    left: 4px
+    width: $logo-font-size / 1.35
+    height: $logo-font-size / 1.35
+    display: block
 
     &::before, &::after
       background: white
       content: ""
       display: block
-      width: 20px
-      height: 20px
-      border-radius: 50%
+      width: 100%
+      height: 100%
+      border-radius: 100%
       position: absolute
       top: 0
       left: 0
@@ -58,22 +59,16 @@
 
 .logo--nav
   margin-right: 40px
-  text-decoration: none
   padding: 0px
-  width: auto
   border: none
 
   .logo__name--nav
-  	font-size: 16px
+  	font-size: $logo-font-size--nav
   	color: #2E3C43
 
   .logo__circle--nav
-    width: 50px
-    height: 50px
-    top: 0px
-    left: 0px
+    width: $logo-font-size--nav / 1.35
+    height: $logo-font-size--nav / 1.35
 
-    &::before, &::after
-      width: 15px
-      height: 15px
+    &:before, &:after
       background: #2E3C43

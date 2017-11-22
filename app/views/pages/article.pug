@@ -15,11 +15,8 @@ block content
                 ul.submenu
                   each file in dir.files
                     li 
-                      a(href="/docs/:" + file.toLowerCase().split(' ').join('-'))= file
+                      a(href="/docs/:" + file.toLowerCase().split(' ').join('-')).link= file
 
       main#article-page
         .content!= content
         
-  script(src="https://code.jquery.com/jquery-3.2.1.min.js", integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=", crossorigin="anonymous")
-  script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert")
-  script(src="/js/index.js")

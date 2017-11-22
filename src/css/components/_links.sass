@@ -1,0 +1,25 @@
+$link-hovered-color: #162745
+
+a.link
+  display: inline-block
+  position: relative
+  text-decoration: none
+  color: inherit
+  transition: 0.5s all ease
+
+  &:after
+    display: block
+    content: ""
+    height: 0.15em
+    width: 0
+    background: $link-hovered-color
+    transition: all 0.5s ease
+    margin-top: 0.15em
+    position: absolute
+
+  &:hover
+    color: inherit
+
+    &:after
+      width: 100%
+      background: $link-hovered-color

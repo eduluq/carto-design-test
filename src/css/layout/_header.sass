@@ -10,12 +10,13 @@
 
   ul
     display: flex
+    align-items: center
 
     li
       margin-right: 20px
       cursor: pointer
 
-      &:nth-child(6)
+      &:nth-child(7)
         margin-right: auto
 
       &:last-child
@@ -45,3 +46,75 @@
     margin: auto
     border-bottom: solid 1px $separator-color
     padding-top: 28px
+
+.nav-toggle
+  display: none
+
+  .nav-toggle__icon
+    display: inline-block
+    position: relative
+    width: 30px
+    height: 4px
+    background-color: $main-color
+    transition: all 0.75s ease
+
+    &:before, &:after
+      content: ''
+      display: block
+      width: 30px
+      height: 4px
+      position: absolute
+      background: $main-color
+      transition: all 0.75s ease
+      z-index: 1001
+
+    &:before
+      top: -8px
+
+    &:after
+      top: 8px
+
+.nav-toggle--active > .nav-toggle__icon
+  background: rgba(0,0,0,0.0)
+
+  &:before
+    transform: rotate(45deg)
+    top: 0
+
+  &:after
+    transform: rotate(-45deg)
+    top: 0
+
+.side-nav
+  width: 75%
+  height: 100%
+  background: $main-color
+  position: fixed
+  top: 0
+  left: -75%
+  z-index: 1000
+  transition: all 0.7s ease
+  box-sizing: border-box
+  display: block !important
+  padding: 40px
+  overflow-y: scroll
+
+  li
+    color: white
+    font-size: 32px
+    display: block !important
+    opacity: 0
+    transition: all 0.7s ease
+    margin-bottom: 25px
+
+    &:nth-child(1)
+      margin-bottom: 40px
+      display: inline-block !important
+
+      a.logo
+
+.side-nav--active
+  transform: translateX(100%)
+
+  li
+    opacity: 1
