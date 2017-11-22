@@ -1,1 +1,1 @@
-console.log("hello");
+var code=$("code");code.each(function(o,e){e.className+=" prettyprint linenums"}),$(document).ready(function(){var o=$(window).height(),e=$(document).height(),n=$("progress"),t,c;t=e-o,n.attr("max",t),$(document).on("scroll",function(){c=$(window).scrollTop(),n.attr("value",c)})});

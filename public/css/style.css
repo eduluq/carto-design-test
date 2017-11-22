@@ -385,3 +385,24 @@ main#article-page {
       font-size: 13px;
       line-heigt: 24px;
       margin-bottom: 0px auto; }
+
+progress {
+  position: fixed;
+  left: 0;
+  top: -10px;
+  width: 100vh;
+  height: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  color: #162945;
+  transform: rotate(90deg);
+  transform-origin: bottom left; }
+  progress::-webkit-progress-bar {
+    background-color: transparent; }
+  progress::-webkit-progress-value {
+    background-color: #162945; }
+  progress::-moz-progress-bar {
+    background-color: #162945; }

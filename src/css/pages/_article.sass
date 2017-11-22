@@ -144,3 +144,27 @@ main#article-page
       font-size: 13px
       line-heigt: 24px
       margin-bottom: 0px auto
+
+progress
+  position: fixed
+  left: 0
+  top: -10px
+  width: 100vh
+  height: 10px
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  border: none
+  background-color: transparent
+  color: $main-color
+  transform: rotate(90deg)
+  transform-origin: bottom left
+
+  &::-webkit-progress-bar
+    background-color: transparent
+
+  &::-webkit-progress-value
+    background-color: $main-color
+
+  &::-moz-progress-bar
+    background-color: $main-color

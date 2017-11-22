@@ -84,6 +84,13 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/data\/general-concepts.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/data\/general-concepts.txt",
+		"oF": 0
+		},
 	"\/data\/getting-started.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -147,16 +154,6 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
-		},
-	"\/public\/js\/index-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/public\/js\/index-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
 		},
 	"\/public\/js\/index.js": {
 		"ft": 64,
