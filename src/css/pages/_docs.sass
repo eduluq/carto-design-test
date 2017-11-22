@@ -1,13 +1,54 @@
-.categories
-  display: flex
-  margin-bottom: 176px
+.docs-intro
+  box-sizing: border-box
+  margin-bottom: 64px
 
-  .category
+  h1
+    font-family: Montserrat
+    font-size: 32px
+    font-weight: 700
+    color: #162945
+    margin-bottom: 16px
+
+  p
+    font-family: Montserrat
+    font-size: 20px
+    font-weight: 400
+    line-height: calc(30/20)
+    color: #162945
+    margin-bottom: 22px
+    max-width: 700px
+
+  input
+    height: 56px
+    width: 450px
+    border: 1px solid #DDDDDD
+    border-radius: 4px
+    background-color: #FFFFFF
+    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.4)
+    text-indent: 16px
+    font-family: Montserrat
+    font-size: 16px
+    line-height: 30px
+    outline: none
+
+    &::placeholder
+      color: #B1B8C1
+
+.docs-categories .container
+  display: flex
+  margin-bottom: 20px
+  flex-wrap: wrap
+
+  .docs-category
     display: flex
     flex-direction: column
+    width: 290px
+    margin-bottom: 40px
 
     &:not(:last-child)
       margin-right: 20px
+    &:last-child
+      margin-right: 0px
 
     h3
       font-family: Montserrat
@@ -27,7 +68,7 @@
 
     .topic-box
       height: 56px
-      width: 300px
+      width: 100%
       border-radius: 4px
       background-color: #FFFFFF
       box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15)
@@ -38,6 +79,7 @@
       cursor: pointer
       text-decoration: none
       margin-bottom: 16px
+      font-family: Montserrat
 
       &:hover
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15)

@@ -1,0 +1,47 @@
+@import ../base/variables
+
+.nav
+  box-sizing: border-box
+  padding: 25px 0px
+  height: 68px
+  font-family: Montserrat
+  font-weight: 600
+  font-size: 13px
+
+  ul
+    display: flex
+
+    li
+      margin-right: 20px
+      cursor: pointer
+
+      &:nth-child(6)
+        margin-right: auto
+
+      &:last-child
+        margin-right: 0
+
+.nav-main
+  background: #fff
+
+  li
+    color: #162945
+
+.nav-secondary
+  background: #F9F9F9
+
+  li
+    color: #647083
+    font-weight: 400
+
+  &.is-selected, &:hover
+    color: #162945 !important
+
+  &:after
+    content: ""
+    display: block
+    height: 1px
+    max-width: 940px
+    margin: auto
+    border-bottom: solid 1px $separator-color
+    padding-top: 28px

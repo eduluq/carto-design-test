@@ -17,13 +17,13 @@ block content
         - var boxTitles = ["CARTO.js", "Routing", "Static"]
         - var boxIcons = ["chip.png", "direction.png", "static.png"]
         - var boxAPI = [false, true, true]
-        - var boxLinks = ["article.html", "article.html", "article.html"]
+        - var boxLinks = ["article", "article", "article"]
               
         each title, index in titles
           .docs-category
             h3= title
             p= description[index]
-            a(href=boxLinks[index]).topic-box
+            a(href="/docs/:" + boxLinks[index]).topic-box
               .topic-box__icon
                 img(src="images/" + boxIcons[index])
               .topic-box__title= boxTitles[index]
