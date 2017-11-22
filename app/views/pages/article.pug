@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  
+  - var menu = [{title: "Home", files: []}, {title: "Client Libraries", files: ["CARTO.js", "Getting Started", "General Concepts", "Named Maps", "Specific UI Functions", "Events", "API Reference"]},{title: "Location Data Services", files: ["Routing"]},{title: "Builder",files: ["Static", "Tiles", "WMS"]}]
+
+  .container
+    .grid
+      aside#aside-article-page
+        ul.menu
+          each dir in menu
+            li= dir.title
+              if dir.files.length
+                ul.submenu
+                  each file in dir.files
+                    li= file
+
+      main#article-page
+        section
+          h1 Getting Started
+          p The simplest way to use a visualization created in CARTO on an external site is as follows.
+          .code-box
+          a Grab the complete source code
+
+        section
+          h2 Using the CARTO.js LibraryPermalink
+          p CARTO.js can be used to embed a visualization you have designed using CARTO’s user interface, or to dynamically create visualizations from scratch, using your data. If you want to create new maps on your webpage, jump to Creating a visualization from scratch. If you already have maps on your webpage and want to add CARTO visualizations to them, read Adding CARTO layers to an existing map.
+          p You can also use the CARTO APIs to create visualizations programmatically. This can be useful when the visualizations react to user interactions. To read more about it, jump to Creating visualizations at runtime.
+          table
+            tr
+              th Arguments
+              th Description
+            tr
+              td map_id
+              td a DOM object
+            tr
+              td vizjson_url
+              td url of the vizjson object.
+            tr
+              td callback(vis,layers)
+              td if a function is specified, it is called once the visualization is created.
+          h3 Other Mapping Libraries
+          p We have also made it easy for you to build maps using the mapping library of your choice. Whether you are using Leaflet or something else, our CARTO.js code remains the same. This makes our API documentation simple and straightforward. It also makes it easy for you to consistently develop, or maintain, multiple maps online.
+          .info-box CARTO.js automatically includes dependencies from other mapping libraries (such as Leaflet, jQuery, Mustache, Underscore, and so on). You do not have to manually include these libraries, or worry about other mapping library version control, when you are using CARTO.js. If you need to see which version of other mapping libraries are included, view the vendor folder for each CARTO.js release.
+
+        section
+          h2 Creating a Visualization from ScratchPermalink
+          p This is the easiest way to quickly get a CARTO map onto your webpage. Use this method when there is no map in your application, and you want to add the visualization to hack over it. CARTO.js handles all the details of loading a map interface, basemap, and your CARTO visualization.
+          p You can start by giving CARTO.js the DIV ID from your HTML where you want to place your map, and the viz.json URL of your visualization (which you can get from the Publish your map options).
+
+        section
+          h2 Nexp Steps
+          p Once the form, with the stored payment token, is submitted to your server, you'll want to use the payment details just collected. Usually this means one of three actions:
+          .concept-box 
+            p.title General Concepts
+            p.description Give your mobile or tablets apps the power of interactive maps.
+
+        section
+          h2 Questions?
+          p We're always happy to help with code or other questions you might have! Search our site for more information or #[a send us an email]!

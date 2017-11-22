@@ -8,7 +8,7 @@ html
     link(rel="stylesheet", href="css/style.css")
   
   body
-    main#welcome-page
-      a(href="/build/docs.html").logo
-        span.logo__name CART
-        span.logo__circle
+    header
+      include ../partials/header.pug
+    main
+      block content

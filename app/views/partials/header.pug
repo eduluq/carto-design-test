@@ -1,0 +1,22 @@
+- var mainLinks = ["Builder", "Engine", "Solutions", "Pricing", "Blog", "Login", "Contact us"];
+- var secondaryLinks = ["Documentation", "Guides", "Tutorials", "Support"];
+
+mixin list(links, main)
+  .container
+    ul
+      if main
+        li
+          a(href="/").logo.logo--nav
+            span.logo__name.logo__name--nav CART
+            span.logo__circle.logo__circle--nav
+      each link in links
+        li= link  
+      else
+        li There are no values
+ 
+nav.nav.nav-main
+  +list(mainLinks, true)
+nav.nav.nav-secondary
+  +list(secondaryLinks, false)
+
+.separator
