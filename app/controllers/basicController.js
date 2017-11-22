@@ -24,11 +24,20 @@ basicController.getArticle = (req, res) => {
   fs.readFile(filePath, "utf8", (err, data) => {
 
     if(err) {
-      console.log("error reading file");
+
+      console.log("Error reading file")
+      var html = "<h1>Sorry! Something bad happened</h1>"
+      html += "<h2>We don't find the file you're looking for."
+      html += "<p>Please, if you think there is an error, <a>contact us</a> and we'll fix it."
+
+      res.render("pages/article", {
+        menu: menu,
+        content: html
+      });
+
     }
 
     else {
-
       var sections = data.split('\n\n\n');
       var html = "";
       for (var i = 0; i < sections.length; i++) {
@@ -40,6 +49,7 @@ basicController.getArticle = (req, res) => {
         menu: menu,
         content: html
       });
+
     }
 
   });

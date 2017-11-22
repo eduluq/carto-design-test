@@ -1,5 +1,5 @@
-- var mainLinks = ["Builder", "Engine", "Solutions", "Pricing", "Blog", "Login", "Contact us"];
-- var secondaryLinks = ["Documentation", "Guides", "Tutorials", "Support"];
+- var mainLinks = [{name: "Builder",href: ""},{name: "Engine",href: ""},{name: "Solutions",href: ""},{name: "Pricing",href: ""},{name: "Blog",href: ""},{name: "Login",href: ""},{name: "Contact us",href: ""}]
+- var secondaryLinks = [{name: "Documentation",href: "/docs"},{name: "Guides",href: ""},{name: "Tutorials",href: ""},{name: "Support",href: ""}]
 
 mixin list(links, main)
   .container
@@ -9,8 +9,9 @@ mixin list(links, main)
           a(href="/").logo.logo--nav
             span.logo__name.logo__name--nav CART
             span.logo__circle.logo__circle--nav
-      each link in links
-        li= link  
+      each link, i in links
+        li
+          a(href="" + link.href)= link.name
       else
         li There are no values
  

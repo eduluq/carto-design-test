@@ -13,12 +13,10 @@ block content
                 ul.submenu
                   each file in dir.files
                     li 
-                      a(href="/:" + file.toLowerCase().split(' ').join('-'))= file
+                      a(href="/docs/:" + file.toLowerCase().split(' ').join('-'))= file
 
       main#article-page
         .content!= content
 
   script(src="/js/index.js")
   script(src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert")
-  
-    
