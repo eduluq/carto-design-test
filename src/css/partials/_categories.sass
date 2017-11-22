@@ -1,0 +1,57 @@
+.categories
+  display: flex
+  margin-bottom: 176px
+
+  .category
+    display: flex
+    flex-direction: column
+
+    &:not(:last-child)
+      margin-right: 20px
+
+    h3
+      font-family: Montserrat
+      font-size: 18px
+      font-weight: 400
+      color: #647083
+      margin-bottom: 8px
+
+    p
+      font-family: Montserrat
+      font-size: 15px
+      font-weight: 400
+      color: #647083
+      line-height: calc(24/15)
+      margin-bottom: 28px
+      flex: 1 0 auto
+
+    .topic-box
+      height: 56px
+      width: 300px
+      border-radius: 4px
+      background-color: #FFFFFF
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15)
+      box-sizing: border-box
+      padding: 16px
+      align-items: center
+      display: flex
+      cursor: pointer
+      text-decoration: none
+      margin-bottom: 16px
+
+      &:hover
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15)
+
+      .topic-box__icon
+        margin-right: 16px
+
+      .topic-box__title
+        margin-right: auto
+        color: #647083
+
+      .topic-box__api
+        padding: 4px 7px
+        border-radius: 2px
+        background: #DDDDDD
+        font-size: 10px !important
+        color: white !important

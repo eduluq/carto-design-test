@@ -1,0 +1,79 @@
+.logo
+  display: block
+  text-decoration: none
+  padding: 20px
+  width: 138px
+  border: 5px solid white
+
+  .logo__name
+  	font-family: Montserrat
+  	font-size: 32px
+  	font-weight: 700
+  	color: white
+  	letter-spacing: 5px
+
+  .logo__circle
+    width: 100px
+    height: 100px
+    margin: 45vh auto
+    border-radius: 50%
+    position: relative
+    top: -6px
+    left: 4px
+
+    &::before, &::after
+      background: white
+      content: ""
+      display: block
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      position: absolute
+      top: 0
+      left: 0
+
+    &::before
+      animation: wave 3s ease-out infinite
+
+    &::after
+      animation: bounce 3s linear infinite
+
+@keyframes wave
+	0%
+		transform: scale(1)
+	10%
+		transform: scale(0.8)
+	20%
+		transform: scale(1)
+		opacity: 0.5
+	100%
+		transform: scale(3)
+		opacity: 0
+
+@keyframes bounce
+	0%, 20%, 100%
+		transform: scale(1)
+	10%
+		transform: scale(0.8)
+
+.logo--nav
+  margin-right: 40px 
+  text-decoration: none
+  padding: 0px
+  width: auto
+  border: none
+
+  .logo__name--nav
+  	font-size: 16px
+  	color: #2E3C43
+
+  .logo__circle--nav
+    width: 50px
+    height: 50px
+    top: 0px
+    left: 0px
+
+    &::before, &::after
+      width: 15px
+      height: 15px
+      background: #2E3C43
