@@ -34,7 +34,8 @@ I've used this web stack because it's the one I'm most comfortable working with.
 # ADD A FILE OR A NEW GUIDE (OR MODIFY)
 
 You can easily add new categories and guides in the docs sections as well as
-articles to each one of the guides.
+articles to each one of the guides. If you modified something, you will have
+to restart the server.
 
 ## Add a new category
 
