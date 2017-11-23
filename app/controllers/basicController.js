@@ -5,11 +5,14 @@ var marked = require('marked');
 
 var basicController = {};
 
+//Index route
 basicController.get = (req, res) => {
   res.render("index");
 }
 
+//Docs route
 basicController.getDocs = (req, res) => {
+  //Get config file to render docs page
   var configPath = path.join(__dirname, "../../data/");
   var config = require(configPath + "config").config;
   res.render("pages/docs", {
@@ -17,9 +20,9 @@ basicController.getDocs = (req, res) => {
   });
 }
 
+//Get article route
 basicController.getArticle = (req, res) => {
 
-  //Get markdown from file
   var dir = req.params.dir.slice(1);
   var file = req.params.article.slice(1);
 
@@ -27,9 +30,11 @@ basicController.getArticle = (req, res) => {
   var configPath = path.join(__dirname, "../../data/" + dir + "/");
   var menu = require(configPath + "config").config
 
+  //Get markdown from file
   var filePath = path.join(__dirname, "../../data/") + dir + "/" + file + ".txt";
   fs.readFile(filePath, "utf8", (err, data) => {
 
+    //Error reading file
     if(err) {
 
       console.log("Error reading file")
@@ -45,6 +50,7 @@ basicController.getArticle = (req, res) => {
 
     }
 
+    //Style and parse markdown text
     else {
       var sections = data.split('\n\n\n');
       var content = "";
@@ -59,11 +65,12 @@ basicController.getArticle = (req, res) => {
         var iconElement = "<div class=\"info-box__icon\"> <img src=/images/info.png> </div>"
         html = html.replace(tag, tag + iconElement)
 
-        //Add styling to concept box
+        //Create section
         var aux = "<section>" + html + "</section>"
         content += aux
       }
 
+      //Render
       res.render("pages/article", {
         directory: dir,
         menu: menu,
