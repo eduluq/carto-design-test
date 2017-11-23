@@ -1,5 +1,4 @@
-$logo-font-size: 32px
-$logo-font-size--nav: 16px
+@import ../base/variables
 
 .logo
   display: flex
@@ -9,7 +8,7 @@ $logo-font-size--nav: 16px
   border: 5px solid white
 
   .logo__name
-    font-family: Montserrat
+    font-family: $logo-font
     font-size: $logo-font-size
     font-weight: 700
     color: white
@@ -21,9 +20,6 @@ $logo-font-size--nav: 16px
     width: $logo-font-size / 1.35
     height: $logo-font-size / 1.35
     display: block
-    -moz-background-clip: padding
-    -webkit-background-clip: padding-box
-    background-clip: padding-box
 
     &::before, &::after
       background: white
@@ -69,11 +65,11 @@ $logo-font-size--nav: 16px
 
   .logo__name--nav
   	font-size: $logo-font-size--nav
-  	color: #2E3C43
+  	color: $main-color
 
   .logo__circle--nav
     width: $logo-font-size--nav / 1.35
     height: $logo-font-size--nav / 1.35
 
     &:before, &:after
-      background: #2E3C43
+      background: $main-color

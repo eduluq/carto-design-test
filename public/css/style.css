@@ -36,7 +36,7 @@ a {
   color: inherit; }
 
 body {
-  background: #fff;
+  background: white;
   width: 100vw;
   height: 100vh;
   max-width: 100%;
@@ -53,16 +53,11 @@ main#welcome-page {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: #162945; }
+  background: #162745; }
 
 main#docs-page {
   background: #F9F9F9;
   padding-top: 50px; }
-
-aside#article-page {
-  width: 30%;
-  height: 500px;
-  background: yellow; }
 
 @media only screen and (max-width: 780px) {
   aside#aside-article-page {
@@ -73,7 +68,7 @@ aside#article-page {
   .grid {
     flex-direction: column;
     margin: 20px auto !important; }
-  progress {
+  progress.reading-indicator {
     height: 5px !important;
     top: -5px !important; }
   .nav-main li:not(:first-child) {
@@ -103,10 +98,7 @@ aside#article-page {
     position: relative;
     width: 23.7037037037px;
     height: 23.7037037037px;
-    display: block;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box; }
+    display: block; }
     .logo .logo__circle::before, .logo .logo__circle::after {
       background: white;
       content: "";
@@ -148,12 +140,12 @@ aside#article-page {
   border: none; }
   .logo--nav .logo__name--nav {
     font-size: 16px;
-    color: #2E3C43; }
+    color: #162745; }
   .logo--nav .logo__circle--nav {
     width: 11.8518518519px;
     height: 11.8518518519px; }
     .logo--nav .logo__circle--nav:before, .logo--nav .logo__circle--nav:after {
-      background: #2E3C43; }
+      background: #162745; }
 
 a.link {
   display: inline-block;
@@ -180,7 +172,7 @@ a.link {
   box-sizing: border-box;
   padding: 25px 0px;
   height: 68px;
-  font-family: Montserrat;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 13px; }
   .nav ul {
@@ -222,7 +214,7 @@ a.link {
     position: relative;
     width: 30px;
     height: 4px;
-    background-color: #162945;
+    background-color: #162745;
     transition: all 0.75s ease; }
     .nav-toggle .nav-toggle__icon:before, .nav-toggle .nav-toggle__icon:after {
       content: '';
@@ -230,7 +222,7 @@ a.link {
       width: 30px;
       height: 4px;
       position: absolute;
-      background: #162945;
+      background: #162745;
       transition: all 0.75s ease;
       z-index: 1001; }
     .nav-toggle .nav-toggle__icon:before {
@@ -250,7 +242,7 @@ a.link {
 .side-nav {
   width: 75%;
   height: 100%;
-  background: #162945;
+  background: #162745;
   position: fixed;
   top: 0;
   left: -75%;
@@ -399,7 +391,7 @@ aside#aside-article-page {
 main#article-page {
   width: 70%;
   font-family: Montserrat;
-  color: #162945; }
+  color: #162745; }
   main#article-page section {
     margin-bottom: 64px; }
   main#article-page h1 {
@@ -424,7 +416,7 @@ main#article-page {
   main#article-page code {
     display: block;
     margin-bottom: 24px;
-    background: #162945;
+    background: #162745;
     color: white;
     padding: 16px;
     font-size: 13px;
@@ -474,7 +466,7 @@ main#article-page {
       font-family: Montserrat;
       font-size: 13px;
       line-height: 24px;
-      color: #162945;
+      color: #162745;
       display: table-cell;
       margin-bottom: 0; }
   main#article-page .concept-box {
@@ -485,7 +477,7 @@ main#article-page {
     background-color: #F9F9F9;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15); }
     main#article-page .concept-box .concept-box__title {
-      color: #162945;
+      color: #162745;
       font-size: 15px;
       line-height: 24px;
       margin-bottom: 0; }
@@ -506,12 +498,12 @@ progress.reading-indicator {
   appearance: none;
   border: none;
   background-color: transparent;
-  color: #162945;
+  color: #162745;
   transform: rotate(90deg);
   transform-origin: bottom left; }
   progress.reading-indicator::-webkit-progress-bar {
     background-color: transparent; }
   progress.reading-indicator::-webkit-progress-value {
-    background-color: #162945; }
+    background-color: #162745; }
   progress.reading-indicator::-moz-progress-bar {
-    background-color: #162945; }
+    background-color: #162745; }
