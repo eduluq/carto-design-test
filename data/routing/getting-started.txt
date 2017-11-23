@@ -56,4 +56,4 @@ Once the form, with the stored payment token, is submitted to your server, you'l
 
 
 ## Questions?
-<p class="myclass">This paragraph has a class "myclass"</p>
+We're always happy to help with code or other questions you might have! Search our site for more information or [send us an email]() !

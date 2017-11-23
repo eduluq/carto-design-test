@@ -157,6 +157,13 @@
 		"oAP": "\/build\/node_modules",
 		"oF": 0
 		},
+	"\/npm-debug.log": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/npm-debug.log",
+		"oF": 0
+		},
 	"\/package.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -228,6 +235,13 @@
 		"oF": 1,
 		"sC": 3,
 		"tS": 0
+		},
+	"\/read.me": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/read.me",
+		"oF": 0
 		},
 	"\/src\/css\/base\/_general.sass": {
 		"aP": 0,
