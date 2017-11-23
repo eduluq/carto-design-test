@@ -51,12 +51,15 @@ basicController.getArticle = (req, res) => {
       for (var i = 0; i < sections.length; i++) {
         var html = marked(sections[i]);
 
-        //console.log("before")
-        //console.log(html)
-        html.replace("<a", "<a class=link");
-        //console.log("after")
-        //console.log(html)
+        //Add class link to links
+        html = html.replace("<a", "<a class=link");
 
+        //Add image to info box
+        var tag = "<div class=\"info-box\">";
+        var iconElement = "<div class=\"info-box__icon\"> <img src=/images/info.png> </div>"
+        html = html.replace(tag, tag + iconElement)
+
+        //Add styling to concept box
         var aux = "<section>" + html + "</section>"
         content += aux
       }

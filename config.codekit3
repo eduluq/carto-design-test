@@ -84,6 +84,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/data\/carto.js\/config-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/data\/carto.js\/config-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/data\/carto.js\/config.js": {
 		"ft": 64,
 		"ma": 0,
@@ -120,6 +130,16 @@
 		"oA": 0,
 		"oAP": "\/data\/routing\/getting-started.txt",
 		"oF": 0
+		},
+	"\/data\/static\/config-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/data\/static\/config-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"\/data\/static\/config.js": {
 		"ft": 64,
@@ -171,6 +191,17 @@
 		"iS": 667,
 		"oA": 0,
 		"oAP": "\/public\/images\/direction.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/public\/images\/info.png": {
+		"ft": 32768,
+		"iS": 640,
+		"oA": 0,
+		"oAP": "\/public\/images\/info.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

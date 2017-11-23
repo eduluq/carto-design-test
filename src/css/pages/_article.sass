@@ -117,15 +117,25 @@ main#article-page
       font-weight: 600
 
   .info-box
-    border-radius: 4px
     width: 100%
-    box-sizing: border-box
-    background: #F6FFF5
     padding: 16px
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15)
-    color: $main-color
-    font-size: 13px
-    line-height: 24px
+    background: #F6FFF5
+    border-radius: 4px
+    box-sizing: border-box
+    display: flex
+
+    .info-box__icon
+      display: block
+      margin-right: 16px
+
+    .info-box__text
+      font-family: Montserrat
+      font-size: 13px
+      line-height: 24px
+      color: $main-color
+      display: table-cell
+      margin-bottom: 0
 
   .concept-box
     width: 100%
@@ -135,19 +145,19 @@ main#article-page
     background-color: #F9F9F9
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15)
 
-    .title
+    .concept-box__title
       color: $main-color
       font-size: 15px
       line-height: 24px
       margin-bottom: 0
 
-    .description
+    .concept-box__description
       color: $secondary-color
       font-size: 13px
-      line-heigt: 24px
-      margin-bottom: 0px auto
+      line-height: 24px
+      margin-bottom: 0
 
-progress
+progress.reading-indicator
   position: fixed
   left: 0
   top: -10px
