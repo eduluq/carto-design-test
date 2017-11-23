@@ -71,7 +71,8 @@ aside#article-page {
     width: 100% !important;
     margin-bottom: 0; }
   .grid {
-    flex-direction: column; }
+    flex-direction: column;
+    margin: 20px auto !important; }
   progress {
     height: 5px !important;
     top: -5px !important; }
@@ -81,7 +82,9 @@ aside#article-page {
     display: block !important;
     margin-right: 0 !important; }
   .nav-main ul {
-    justify-content: space-between; } }
+    justify-content: space-between; }
+  ul.menu {
+    font-size: 16px !important; } }
 
 .logo {
   display: flex;

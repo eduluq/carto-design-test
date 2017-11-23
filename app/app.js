@@ -18,6 +18,7 @@ app.use("/", routes);
 
 //Init server
 var port = 3000;
-app.listen(port, () => {
+var ip = '0.0.0.0';
+app.listen(port, ip, () => {
   console.log("Server running on port " + port);
 });

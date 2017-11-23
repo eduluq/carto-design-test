@@ -42,7 +42,6 @@ basicController.getArticle = (req, res) => {
       var content = "";
       for (var i = 0; i < sections.length; i++) {
         var html = marked(sections[i]);
-        console.log(html)
         var aux = "<section>" + html + "</section>"
         content += aux
       }
