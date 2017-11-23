@@ -10,17 +10,24 @@ basicController.get = (req, res) => {
 }
 
 basicController.getDocs = (req, res) => {
-  res.render("pages/docs");
+  var configPath = path.join(__dirname, "../../data/");
+  var config = require(configPath + "config").config;
+  res.render("pages/docs", {
+    config: config
+  });
 }
 
 basicController.getArticle = (req, res) => {
 
-  //Menu
-  var menu = [{title: "Home", files: []}, {title: "Client Libraries", files: ["CARTO.js", "Getting Started", "General Concepts", "Named Maps", "Specific UI Functions", "Events", "API Reference"]},{title: "Location Data Services", files: ["Routing"]},{title: "Builder",files: ["Static", "Tiles", "WMS"]}];
-
   //Get markdown from file
+  var dir = req.params.dir.slice(1);
   var file = req.params.article.slice(1);
-  var filePath = path.join(__dirname, "../../data/") + file + ".txt";
+
+  //Get menu from config
+  var configPath = path.join(__dirname, "../../data/" + dir + "/");
+  var menu = require(configPath + "config").config
+
+  var filePath = path.join(__dirname, "../../data/") + dir + "/" + file + ".txt";
   fs.readFile(filePath, "utf8", (err, data) => {
 
     if(err) {
@@ -31,6 +38,7 @@ basicController.getArticle = (req, res) => {
       html += "<p>Please, if you think there is an error, <a class=\"link\">contact us</a> and we'll fix it."
 
       res.render("pages/article", {
+        directory: dir,
         menu: menu,
         content: html
       });
@@ -42,11 +50,19 @@ basicController.getArticle = (req, res) => {
       var content = "";
       for (var i = 0; i < sections.length; i++) {
         var html = marked(sections[i]);
+
+        //console.log("before")
+        //console.log(html)
+        html.replace("<a", "<a class=link");
+        //console.log("after")
+        //console.log(html)
+
         var aux = "<section>" + html + "</section>"
         content += aux
       }
 
       res.render("pages/article", {
+        directory: dir,
         menu: menu,
         content: content
       });

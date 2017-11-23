@@ -84,12 +84,52 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/data\/getting-started.txt": {
+	"\/data\/carto.js\/config.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/data\/carto.js\/config-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/data\/config.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/data\/config-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/data\/routing\/config.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/data\/routing\/config-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/data\/routing\/getting-started.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/data\/getting-started.txt",
+		"oAP": "\/data\/routing\/getting-started.txt",
 		"oF": 0
+		},
+	"\/data\/static\/config.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/data\/static\/config-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"\/node_modules": {
 		"ft": 65536,

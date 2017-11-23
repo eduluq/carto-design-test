@@ -10,22 +10,19 @@ block content
         p Learn all about the CARTO Engine. An Open Source tool that enables you to use several APIs to build advanced, dynamic geospatial datasets and scalable maps for your own applications.
         input(type="text" placeholder="Search the docs")
           
-    .docs-categories
+    .categories
       .container
-        - var titles = ["Engine", "Location Data Services", "Builder"]
-        - var description = ["An Open Source tool that enables you to use several APIs to build advanced, dynamic geospatial datasets and scalable maps for your own applications.", "Employ our native SDKs to obtain maps and services on native applications, using them on the Web with open source JavaScript or 3rd party libraries.", "Unleash the power of location intelligence with self-service, actionable dashboards you can share with your organization."]
-        - var boxTitles = ["CARTO.js", "Routing", "Static"]
-        - var boxIcons = ["chip.png", "direction.png", "static.png"]
-        - var boxAPI = [false, true, true]
-        - var boxLinks = ["getting-started", "getting-started", "getting-started"]
               
-        each title, index in titles
-          .docs-category
-            h3= title
-            p= description[index]
-            a(href="/docs/:" + boxLinks[index]).topic-box
-              .topic-box__icon
-                img(src="images/" + boxIcons[index])
-              .topic-box__title= boxTitles[index]
-              if boxAPI[index]
-                .topic-box__api API
+        each val in config
+          .category
+            h3.category__title= val.title
+            p.category__description= val.description
+            .category__topics
+              each topic in val.topics
+                - var filePath = "/docs/:" + topic.title.toLowerCase() + "/:getting-started"
+                a(href= filePath).category__topic
+                  .category__topic__icon
+                    img(src="images/" + topic.img)
+                  .category__topic__title= topic.title
+                  if topic.api
+                    .category__topic__api API

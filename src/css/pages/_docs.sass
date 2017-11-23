@@ -1,6 +1,6 @@
 .docs-intro
   box-sizing: border-box
-  margin-bottom: 64px
+  margin-bottom: 100px
 
   h1
     font-family: Montserrat
@@ -36,66 +36,69 @@
     &::placeholder
       color: #B1B8C1
 
-.docs-categories .container
+.categories .container
   display: flex
   margin-bottom: 20px
   flex-wrap: wrap
 
-  .docs-category
+  .category
     display: flex
     flex-direction: column
     width: 290px
     margin-bottom: 40px
+    justify-content: flex-start
 
     &:not(:last-child)
       margin-right: 20px
     &:last-child
       margin-right: 0px
 
-    h3
+    .category__title
       font-family: Montserrat
       font-size: 18px
       font-weight: 400
       color: #647083
       margin-bottom: 8px
 
-    p
+    .category__description
       font-family: Montserrat
       font-size: 15px
       font-weight: 400
       color: #647083
       line-height: calc(24/15)
       margin-bottom: 28px
-      flex: 1 0 auto
+      height: 100px
 
-    .topic-box
-      height: 56px
-      width: 100%
-      border-radius: 4px
-      background-color: #FFFFFF
-      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15)
-      box-sizing: border-box
-      padding: 16px
-      align-items: center
-      display: flex
-      cursor: pointer
-      text-decoration: none
-      margin-bottom: 16px
-      font-family: Montserrat
+    .category__topics
 
-      &:hover
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15)
+      .category__topic
+        height: 56px
+        width: 100%
+        border-radius: 4px
+        background-color: #FFFFFF
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15)
+        box-sizing: border-box
+        padding: 16px
+        align-items: center
+        display: flex
+        cursor: pointer
+        text-decoration: none
+        margin-bottom: 16px
+        font-family: Montserrat
 
-      .topic-box__icon
-        margin-right: 16px
+        &:hover
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15)
 
-      .topic-box__title
-        margin-right: auto
-        color: #647083
+        .category__topic__icon
+          margin-right: 16px
 
-      .topic-box__api
-        padding: 4px 7px
-        border-radius: 2px
-        background: #DDDDDD
-        font-size: 10px !important
-        color: white !important
+        .category__topic__title
+          margin-right: auto
+          color: #647083
+
+        .category__topic__api
+          padding: 4px 7px
+          border-radius: 2px
+          background: #DDDDDD
+          font-size: 10px !important
+          color: white !important

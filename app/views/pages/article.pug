@@ -14,8 +14,8 @@ block content
               if dir.files.length
                 ul.submenu
                   each file in dir.files
-                    li 
-                      a(href="/docs/:" + file.toLowerCase().split(' ').join('-')).link= file
+                    li(id=file.toLowerCase().split(' ').join('-'))
+                      a(href="/docs/:" + directory + "/:" + file.toLowerCase().split(' ').join('-')).link= file
 
       main#article-page
         .content!= content

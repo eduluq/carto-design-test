@@ -28,9 +28,14 @@ aside#aside-article-page
       margin-bottom: 0
       margin-left: 30px
 
-      &.is-selected
-        font-weight: 700
-        color: $is-selected-color
+      a
+        &.is-selected
+          font-weight: 700
+          color: $is-selected-color
+
+        &.link--active
+          font-weight: 600 !important
+          color: $link-hovered-color !important
 
 main#article-page
   width: 70%

@@ -7,6 +7,6 @@ var basicController = require("./controllers/basicController").basicController;
 // Routes
 routes.get("", basicController.get);
 routes.get("/docs", basicController.getDocs);
-routes.get("/docs/:article", basicController.getArticle);
+routes.get("/docs/:dir/:article", basicController.getArticle);
 
 exports.routes = routes;

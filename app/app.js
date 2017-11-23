@@ -12,7 +12,7 @@ app.set("view engine", "pug");
 //Static Files
 app.use(express.static(path.join(__dirname, "../public")));
 
-//Api routes
+//Routes
 var routes = require("./routes.js").routes;
 app.use("/", routes);
 
