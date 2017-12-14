@@ -1,4 +1,10 @@
-# INSTALL
+# About
+
+This is my solution to the tech test for the design team at Carto (https://carto.com)
+
+To get more information about what was needed to be done check https://gist.github.com/jimartincorral/b8ea2a56bc4ad4a9438272048a6861ba
+
+# Install
 
 To start the server, move to the folder carto-test/app and execute the command:
 node app.js. It will listen on http://localhost:3000.
@@ -16,7 +22,7 @@ prototype.
 I've built and tested it only on Chrome v62 and Firefox v57. I've noticed some things
 doesn't render correctly in ancient navigators but I've not had time to fix it.
 
-# TECH STACK
+# Tech Stack
 
 The server is build with node.js and express. It uses pug as the view engine and
 SASS as css preprocessor. The text content of all the documentation is stored in
@@ -24,14 +30,14 @@ the file system (/data).
 
 I've used this web stack because it's the one I'm most comfortable working with.
 
-# FILE STRUCTURE
+# File Structure
 
 - /app. It includes the web server logic and views.
 - /data. It includes the text content and configuration of the documentation.
 - /public. It includes the static files (js, css, images...)
 - /src. It includes sass files.
 
-# ADD A FILE OR A NEW GUIDE (OR MODIFY)
+# Add a file or a new guide (or modify)
 
 You can easily add new categories and guides in the docs sections as well as
 articles to each one of the guides. If you modified something, you will have
@@ -80,7 +86,7 @@ To add content to one of these links, you should add a new file.txt with the sam
 name you've used in the menu but in lowecase and replacing " " with "-". (It
 supports markdown). To see an example, check the data/routing/getting-started.txt
 
-# IMPROVEMENTS
+# Improvements
 
 I've used the file system instead of a database because of lack
 of time and simplicity to add content. It would be preferable to store the content
