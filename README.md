@@ -1,6 +1,6 @@
 # About
 
-This is my solution to the tech test for the design team at Carto (https://carto.com)
+This is my solution to the tech test proposed by the Design Team at Carto (https://carto.com)
 
 To get more information about what was needed to be done check https://gist.github.com/jimartincorral/b8ea2a56bc4ad4a9438272048a6861ba
 
